@@ -34,7 +34,7 @@ UserSchema.pre('save', function (next) {
       next();
     })
     .catch(err => {
-      res.status(500).json({ errorMessage: 'Error checking password' });
+      return next(err);
     });
 
 });
