@@ -12,7 +12,7 @@ const createUser = (req, res) => {
       res.status(200).json(newUser);
     })
     .catch(err => {
-      res.status(500).json(err)
+      return next(err);
     });
 };
 
